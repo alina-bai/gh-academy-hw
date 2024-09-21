@@ -1,0 +1,96 @@
+Last 3 days I have been practising the terminal, how to work on it. The common commands. It was really interstinf for me , I have spend hours of practicing. 
+I used ChatGPT as my assisstant. I tyoe there "I am new to IT please help me to learn the Terminal , and I was give=ing command like how to create the folder , how to rename etc. But I ask 
+to give me detailed explanation.
+
+Here is one of my practice exercizes:
+azamat@Azamats-MBP ~ % mv [Java-Week1.pdf/Users/azamat/GHJava
+zsh: bad pattern: [Java-Week1.pdf/Users/azamat/GHJava
+azamat@Azamats-MBP ~ % mv "Java Week1.pdf" "/Users/azamat/GH Java/"
+mv: rename Java Week1.pdf to /Users/azamat/GH Java/: No such file or directory
+azamat@Azamats-MBP ~ % mv /Users/azamat/Java-Week1.pdf /Users/azamat/GHJava/
+mv: rename /Users/azamat/Java-Week1.pdf to /Users/azamat/GHJava/: No such file or directory
+azamat@Azamats-MBP ~ % cd ~/Desktop
+azamat@Azamats-MBP Desktop % mv Java-Week1.pdf GHJava/
+azamat@Azamats-MBP Desktop % rm Homeworkfolder
+rm: Homeworkfolder: is a directory
+azamat@Azamats-MBP Desktop % cd ~/Homeworkfolder
+cd: no such file or directory: /Users/azamat/Homeworkfolder
+azamat@Azamats-MBP Desktop % ls
+Aza backend		Homeworkfolder		teaching 
+DOCUMENTS		growthhungry		webdevelopment Alina
+For neck and spine	python			Голос курс
+GHJava			screens from the course
+azamat@Azamats-MBP Desktop % rm Homeworkfolder
+rm: Homeworkfolder: is a directory
+azamat@Azamats-MBP Desktop % rmdir ~/Desktop/Homeworkfolder
+azamat@Azamats-MBP Desktop % clear
+
+azamat@Azamats-MBP Desktop % mkdir HW
+azamat@Azamats-MBP Desktop % cd ~/HW
+cd: no such file or directory: /Users/azamat/HW
+azamat@Azamats-MBP Desktop % cd ~/HW
+cd: no such file or directory: /Users/azamat/HW
+azamat@Azamats-MBP Desktop % ls
+Aza backend		HW			teaching 
+DOCUMENTS		growthhungry		webdevelopment Alina
+For neck and spine	python			Голос курс
+GHJava			screens from the course
+azamat@Azamats-MBP Desktop % cd ~/HW
+cd: no such file or directory: /Users/azamat/HW
+azamat@Azamats-MBP Desktop % cd ~/HW
+cd: no such file or directory: /Users/azamat/HW
+azamat@Azamats-MBP Desktop % cd/Desktop/HW
+zsh: no such file or directory: cd/Desktop/HW
+azamat@Azamats-MBP Desktop % cd ~/Desktop/HW
+azamat@Azamats-MBP HW % touch file.txt
+azamat@Azamats-MBP HW % cd file.txt
+cd: not a directory: file.txt
+azamat@Azamats-MBP HW % cd ~/file.txt
+cd: no such file or directory: /Users/azamat/file.txt
+azamat@Azamats-MBP HW % touch test
+azamat@Azamats-MBP HW % ls
+file.txt	test
+azamat@Azamats-MBP HW % cd test
+cd: not a directory: test
+azamat@Azamats-MBP HW % rm test
+azamat@Azamats-MBP HW % ls
+file.txt
+azamat@Azamats-MBP HW % cd test
+cd: no such file or directory: test
+azamat@Azamats-MBP HW % ls
+file.txt
+azamat@Azamats-MBP HW % mkdir test
+azamat@Azamats-MBP HW % ls
+file.txt	test
+azamat@Azamats-MBP HW % cd test
+azamat@Azamats-MBP test % echo Hello >test
+azamat@Azamats-MBP test % echo How are you >file.txt
+azamat@Azamats-MBP test % echo Have a great day! >>file.txt
+azamat@Azamats-MBP test % mv file.txt myfile.txt
+azamat@Azamats-MBP test % cd myfile.txt ..
+cd: string not in pwd: myfile.txt
+azamat@Azamats-MBP test % cd ..
+azamat@Azamats-MBP HW % cd myfile.txt ..
+cd: string not in pwd: myfile.txt
+azamat@Azamats-MBP HW % cd test
+azamat@Azamats-MBP test % cd myfile.txt ..
+cd: string not in pwd: myfile.txt
+azamat@Azamats-MBP test % ls 
+myfile.txt	test
+azamat@Azamats-MBP test % cd ..
+azamat@Azamats-MBP HW % rm file.txt
+azamat@Azamats-MBP HW % ls
+test
+azamat@Azamats-MBP HW % cd test
+azamat@Azamats-MBP test % cd myfile.txt ..
+cd: string not in pwd: myfile.txt
+azamat@Azamats-MBP test %  cd myfile.txt
+cd: not a directory: myfile.txt
+azamat@Azamats-MBP test % mv myfile.txt test ..
+mv: rename test to ../test: Is a directory
+azamat@Azamats-MBP test % mv test ..
+mv: rename test to ../test: Is a directory
+azamat@Azamats-MBP test % ls
+test
+azamat@Azamats-MBP test % mv test HW
+azamat@Azamats-MBP test % ls 
