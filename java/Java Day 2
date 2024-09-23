@@ -1,0 +1,20 @@
+public class HelloYou { 
+  public static void main(String[] args) {
+    System.out.println("Hello Alina");
+    
+  }
+}
+
+
+
+
+public class HideAndSeek {
+  public static void main(String[] args) {
+    System.out.println("Let's play hide and seek.");
+    System.out.print("Three...");
+    System.out.print("Two...");
+
+  }
+}
+
+Today I have learned about System.out.println and System.out.print. 
