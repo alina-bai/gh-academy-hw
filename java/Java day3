@@ -1,0 +1,20 @@
+Today I have studied about variables.
+How to create variables.
+and did some practise .I found a video  to study on youtube, so far i really like the video. https://www.youtube.com/watch?v=xk4_1vDrzzo
+
+
+public class Main {
+    public static void main (String[] args) {
+        int x = 123;
+        double y = 3.14;
+        boolean z = true;
+        char symbol = '@';
+        String name = "Bro";
+        System.out.println("Hello " + name);
+    }
+
+}
+
+
+
+I have spend today 3 hours to understand the INtellij IDea , need to practise more
