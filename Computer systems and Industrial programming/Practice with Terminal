@@ -1,0 +1,80 @@
+azamat@Azamats-MBP HW % ls
+myfile.txt	test
+azamat@Azamats-MBP HW % pwd
+/Users/azamat/Desktop/HW
+azamat@Azamats-MBP HW % cd ..
+azamat@Azamats-MBP Desktop % mkdir test_dir
+azamat@Azamats-MBP Desktop % touch myfile.txt
+azamat@Azamats-MBP Desktop % mv myfile.txt test_dir
+azamat@Azamats-MBP Desktop % cd test_dir
+azamat@Azamats-MBP test_dir % ls
+myfile.txt
+azamat@Azamats-MBP test_dir % nano Hello world
+azamat@Azamats-MBP test_dir % nano myfile.txt 
+azamat@Azamats-MBP test_dir % pwd
+/Users/azamat/Desktop/test_dir
+azamat@Azamats-MBP test_dir % ls
+    		myfile.txt
+azamat@Azamats-MBP test_dir % ls -la
+total 16
+-rw-r--r--@  1 azamat  staff  3096 Oct  2 16:51     
+drwxr-xr-x   4 azamat  staff   128 Oct  2 16:51 .
+drwx------@ 17 azamat  staff   544 Oct  2 16:45 ..
+-rw-r--r--@  1 azamat  staff  3096 Oct  2 16:54 myfile.txt
+azamat@Azamats-MBP test_dir % clear
+
+azamat@Azamats-MBP test_dir % ps
+  PID TTY           TIME CMD
+ 4450 ttys000    0:00.18 -zsh
+ 6262 ttys000    0:00.01 cat
+azamat@Azamats-MBP test_dir % touch bash_practice.txt
+azamat@Azamats-MBP test_dir % ls
+bash_practice.txt	myfile.txt
+azamat@Azamats-MBP test_dir % cd bash_practice.txt
+cd: not a directory: bash_practice.txt
+azamat@Azamats-MBP test_dir % nano bash_practice.txt
+azamat@Azamats-MBP test_dir % cp bash_practice.txt
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory
+azamat@Azamats-MBP test_dir % cd ..
+azamat@Azamats-MBP Desktop % mkdir my_directory
+azamat@Azamats-MBP Desktop % cp bash_practice.txt my_directory
+cp: bash_practice.txt: No such file or directory
+azamat@Azamats-MBP Desktop % cd test_dir
+azamat@Azamats-MBP test_dir % cp cp bash_practice.txt my_directory
+cp: my_directory is not a directory
+azamat@Azamats-MBP test_dir % cd
+azamat@Azamats-MBP ~ % cd desktop
+azamat@Azamats-MBP desktop % ls
+Aza backend		Maventest		test_dir
+DOCUMENTS		growthhungry		webdevelopment Alina
+For neck and spine	my_directory		Голос курс
+GHJava			screens from the course
+HW			teaching 
+azamat@Azamats-MBP desktop % cd test_dir
+azamat@Azamats-MBP test_dir % cp bash_practice.txt ~/Desktop/my_directory/
+azamat@Azamats-MBP test_dir %   cp myfile.txt ~/Desktop/my_directory/ 
+azamat@Azamats-MBP test_dir % touch another_file.txt
+azamat@Azamats-MBP test_dir % nano another_file.txt
+azamat@Azamats-MBP test_dir % cp another_file.txt my_directory
+azamat@Azamats-MBP test_dir % cp another_file.txt ~/Desktop/my_directory/ 
+azamat@Azamats-MBP test_dir % cd my_directory
+cd: no such file or directory: my_directory
+azamat@Azamats-MBP test_dir % cd
+azamat@Azamats-MBP ~ % ls
+Applications	Downloads	Movies		Postman		phyton
+Desktop		IdeaProjects	Music		Public
+Documents	Library		Pictures	PycharmProjects
+azamat@Azamats-MBP ~ % cd desktop
+azamat@Azamats-MBP desktop % ls
+Aza backend		Maventest		test_dir
+DOCUMENTS		growthhungry		webdevelopment Alina
+For neck and spine	my_directory		Голос курс
+GHJava			screens from the course
+HW			teaching 
+azamat@Azamats-MBP desktop % cd my_directory
+azamat@Azamats-MBP my_directory % mv another_file.txt my_file.txt
+azamat@Azamats-MBP my_directory % cd ..
+azamat@Azamats-MBP desktop % cd test_dir
+azamat@Azamats-MBP test_dir % rm another_file.txt
+azamat@Azamats-MBP test_dir % 
