@@ -1,0 +1,295 @@
+When you type commands directly into the terminal (like ls, echo, cd, etc.), the shell executes them immediately, one by one. These are actions you perform interactively, and they execute only once when you type them.
+
+For example, if you type:
+
+echo "Hello, Alina!"
+
+This will instantly print "Hello, Alina!" to the terminal.
+
+Scripts
+
+A script is simply a collection of commands, written in a file, that can be executed together in a sequence. Instead of typing multiple commands one by one, you save them in a script and run the entire script with one command. It automates the process and can include more complex logic like loops and conditions.
+
+For example, let’s say you want to do these three things:
+
+	1.	Print a greeting.
+	2.	List the contents of a directory.
+	3.	Print a goodbye message.
+
+If you type it directly in the terminal, you would do something like:
+
+echo "Hello, Alina!"
+ls
+echo "Goodbye, Alina!"
+
+If you put these commands in a script called greetings.sh, it would look like this:
+
+#!/bin/bash
+echo "Hello, Alina!"
+ls
+echo "Goodbye, Alina!"
+
+Key Difference:
+
+	•	In the terminal: You have to manually type and execute each command.
+	•	In a script: All the commands are saved in a file, and you execute the entire file at once. It’s like telling the computer to run a set of instructions in sequence.
+
+Let’s make a simple script together:
+
+	1.	Open a new script file using Nano:
+
+nano simple_script.sh
+
+
+	2.	Write the following commands inside the file:
+
+#!/bin/bash
+echo "Starting the script..."
+pwd    # Print the current directory
+ls     # List the contents of the directory
+echo "Script finished!"
+
+
+	3.	Save the file (CTRL + X, then Y, and Enter).
+	4.	Make the script executable:
+
+chmod +x simple_script.sh
+
+
+	5.	Run the script:
+
+./simple_script.sh
+
+
+
+This script will:
+
+	1.	Print “Starting the script…”
+	2.	Show the current directory path with pwd.
+	3.	List the contents of the directory with ls.
+	4.	Print “Script finished!”
+
+Would you like to try that? If so, let me know how it goes, and we can build from there!
+ask: Script with Variables and Conditional Logic
+
+Here’s a script where:
+
+	1.	We use a variable to store a name.
+	2.	Then, we check if the name is Alina using a conditional (if statement).
+	3.	If the name is Alina, it prints a special greeting; otherwise, it prints a default message.
+
+Steps:
+
+	1.	Open a new script or modify the existing one:
+
+nano name_check.sh
+
+
+	2.	Write this script inside:
+
+#!/bin/bash
+
+# Define a variable
+name="Alina"
+
+# Print the name
+echo "Hello, $name!"
+
+# Conditional check
+if [ "$name" = "Alina" ]; then
+    echo "Welcome back, Alina!"
+else
+    echo "Hello, stranger!"
+fi
+
+
+	3.	Save and exit (CTRL + X, Y, Enter).
+	4.	Make the script executable:
+
+chmod +x name_check.sh
+
+
+	5.	Run the script:
+
+./name_check.sh
+
+
+
+Expected Output:
+
+	•	If the name is Alina, it will print:
+
+Hello, Alina!
+Welcome back, Alina!
+
+
+	•	If you change the value of the name variable to something else (like John), it will print:
+
+Hello, John!
+Hello, stranger!
+
+
+
+Let’s give this a try! Once you’re comfortable with variables and conditions, we can move on to your homework. Let me know how it goes!
+
+You can change the name directly inside the script where the variable name is defined. Here’s how:
+
+Step-by-Step to Change the Name:
+
+	1.	Open your script again:
+
+nano name_check.sh
+
+
+	2.	Find this line:
+
+name="Alina"
+
+
+	3.	Change “Alina” to something else:
+For example, change it to John:
+
+name="John"
+
+
+	4.	Save the file and exit (CTRL + X, then Y, then Enter).
+	5.	Run the script again:
+
+./name_check.sh
+
+
+
+Now the script will print:
+
+Hello, John!
+Hello, stranger!
+
+Would you like to try that? After this, we can move on to your homework.
+Fantastic! You’re really getting the hang of this. Now that you’ve practiced with variables and conditions, let’s move on to your homework!
+
+Your Assignment: Script to Upload Files to GitHub
+
+For this, the process typically involves:
+
+	1.	Checking for new files in a local directory.
+	2.	Adding the new files to the Git staging area.
+	3.	Committing the changes.
+	4.	Pushing the changes to a GitHub repository.
+
+Let’s write a script that can automate these steps.
+
+Steps to Write the Script:
+
+	1.	Open a new script:
+
+nano upload_to_github.sh
+
+
+	2.	Write the following script inside:
+
+#!/bin/bash
+
+# Define variables
+repo_dir="/path/to/your/repository"  # Change this to the path of your local GitHub repo
+commit_message="Auto-upload new file"
+
+# Navigate to the repository directory
+cd "$repo_dir"
+
+# Add all new or modified files to the staging area
+git add .
+
+# Commit the changes with a message
+git commit -m "$commit_message"
+
+# Push the changes to the remote repository (GitHub)
+git push origin main   # Make sure 'main' is the correct branch (could be 'master')
+
+echo "Files have been successfully uploaded to GitHub!"
+
+
+	3.	Modify the script:
+	•	Replace /path/to/your/repository with the actual path of your local GitHub repository.
+	•	Change the commit_message if you want a different message to show up in your commits.
+	4.	Save the script and exit (CTRL + X, Y, Enter).
+	5.	Make the script executable:
+
+chmod +x upload_to_github.sh
+
+
+	6.	Run the script:
+
+./upload_to_github.sh
+
+
+
+Explanation of the Script:
+
+	•	The script navigates to your local Git repository directory.
+	•	It adds all new or modified files (git add .), commits them with a message, and pushes them to GitHub.
+	•	The git push origin main command uploads the changes to the main branch on GitHub.
+
+Would you like to try this, and do you need help finding your local repository path or setting up Git if you haven’t already?
+To find or set up your local GitHub repository, follow these steps:
+
+1. Find Your Local GitHub Repository (if already cloned)
+
+If you’ve already cloned a GitHub repository to your computer, you can find its local path.
+
+	•	Check the directory where it’s located:
+	•	If you know the folder where you cloned it, you can navigate to that folder in the terminal. For example:
+
+cd /path/to/your/github/repo
+
+
+	•	Once inside the folder, you can confirm it’s a Git repository by running:
+
+git status
+
+
+	•	If it responds with the status of your repository (e.g., “On branch main”), you’re in the right directory. Use this path for the repo_dir variable in your script.
+Example:
+If your GitHub repository is located at /home/alina/my_github_repo, set:
+
+repo_dir="/home/alina/my_github_repo"
+
+
+
+2. Cloning a Repository (if you don’t have one locally)
+
+If you don’t have a local repository, you need to clone one from GitHub. Here’s how:
+
+	•	Go to your repository on GitHub.
+	•	Find the clone URL (usually located on the repository page under the green “Code” button).
+	•	In the terminal, navigate to the directory where you want to store the local repository:
+
+cd /path/where/you/want/the/repo
+
+
+	•	Use git clone to copy the repository:
+
+git clone https://github.com/your-username/your-repository.git
+
+Replace https://github.com/your-username/your-repository.git with your repository’s URL.
+
+	•	After cloning, the repository will be downloaded to the folder. You can then navigate into it:
+
+cd your-repository
+
+Use this folder path for the repo_dir in your script.
+
+3. Set Up the repo_dir in the Script
+
+Once you know the path to your local GitHub repository, modify your script:
+
+repo_dir="/path/to/your/local/repository"
+
+Example:
+
+If your repository is located at /home/alina/projects/my_github_repo, then:
+
+repo_dir="/home/alina/projects/my_github_repo"
+
+After setting the correct path, you can save the script and run it to automatically upload files.
+
+Would you like help with cloning the repository or checking your current local repo?
