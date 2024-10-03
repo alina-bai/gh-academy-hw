@@ -14,7 +14,7 @@ git add
 git commit -m "$commit_message"
 
 # Push the changes to the remote repository (Github)
-git push origin main  #make sure 'main' is the correct branch (could be 'master')
+git push origin master  #make sure 'main' is the correct branch (could be 'master')
 
 echo "Files have been successfully uploaded to Github!"Computer systems and Industrial programming 
 
