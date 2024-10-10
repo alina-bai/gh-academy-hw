@@ -1,0 +1,10 @@
+#!/bin/bash
+commit_message="Auto-uploaded by script"
+cd "/Users/azamat/Desktop/gh-academy-hw/Computer systems and Industrial programming"
+
+git add .
+git commit -m "$commit_message"
+git pull origin main
+git push origin main
+
+echo "Files have been successfully uploaded to GitHub!"
