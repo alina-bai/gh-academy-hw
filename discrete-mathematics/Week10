@@ -1,0 +1,32 @@
+ EXERCISE 10: HashMap Operations
+449
+public static Character findMostFrequentCharacter(String input
+458
+451
+if (input == null I/ input.isEmpty())
+usage
+new
+452
+return null;
+453
+454
+455
+Map<Character, Integer> frequency = new HashMap<>():
+456
+for (char c : input.toCharArray()){
+457
+frequency.merge(c,
+value:1, Integer::sum);
+458
+459
+460
+return frequency.entrySet().stream() Stream<Entry<...>>
+461
+.max(Map.Entry.comparingByValue()) Optional<Entry<...>>
+EziZ Hally
+462
+.map(Map.Entry::getKey) Optional<Character>
+463
+.orElse( other: null);
+464
+465
